@@ -1,15 +1,14 @@
 import { Nav } from "./styled";
 import { Link } from "react-router-dom";
-import logo from '../../Img/logo.png'
+import logo from "../../Img/logo.png";
 
-
-export default function Header(){
-    return(
-        <Nav>
-          <a>Belas Artes Construcoes</a>
-          <Link to="/" className="Link">
-          <img src={logo}></img>
-          </Link>
-        </Nav>
-    )
+export default function Header() {
+  return (
+    <Nav>
+      <span>Belas Artes Construcoes</span>
+      <Link to="/" className="Link">
+        <img src={logo} alt="Belas Artes Construcoes"></img>
+      </Link>
+    </Nav>
+  );
 }

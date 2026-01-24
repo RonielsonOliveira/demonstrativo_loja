@@ -1,7 +1,6 @@
-import styled from 'styled-components';
-import * as colors from '../../config/colors';
+import styled from "styled-components";
 
-export const SliderContainer= styled.div`
+export const SliderContainer = styled.div`
   width: 80%;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -13,7 +12,7 @@ export const Image = styled.img`
   height: 300px;
   object-fit: cover;
   border-radius: 15px;
-  
+
   cursor: pointer;
   transition: transform 0.3s;
 
@@ -34,10 +33,8 @@ export const Modal = styled.div`
   z-index: 999;
 `;
 
-
 export const ModalImage = styled.img`
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
-  
 `;
