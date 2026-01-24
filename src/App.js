@@ -14,7 +14,6 @@ export default function App() {
     <BrowserRouter>
       <Header />
       <Routes />
-
       <GlobalStyles />
       <ToastContainer autoClose={3000} className="toast-container" />
     </BrowserRouter>

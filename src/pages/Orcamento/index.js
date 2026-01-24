@@ -53,7 +53,7 @@ export default function Aluno() {
   const navigate = useNavigate();
   return (
     <Container>
-      <Title>Solicite orcamento</Title>
+      <Title>Solicite seu orçamento</Title>
       <Content>
         <Form onSubmit={handleSubmit}>
           <label htmlFor="nome">Nome</label>
@@ -71,7 +71,7 @@ export default function Aluno() {
             name="telefone"
             placeholder="(00) 00000-0000"
           />
-          <label htmlFor="descricao">Descricao</label>
+          <label htmlFor="descricao">Descrição</label>
           <textarea
             id="descricao"
             type="descricao"
@@ -84,7 +84,7 @@ export default function Aluno() {
             }}
             placeholder="Descreva com mais detalhes o que voce necessita"
           />
-          <label className="titulo-servico">Selecione o servico:</label>
+          <label className="titulo-servico">Selecione o(s) serviço(s)</label>
           <Checkbox>
             <label>
               Reforma
@@ -114,8 +114,7 @@ export default function Aluno() {
           <button type="submit">Enviar</button>
         </Form>
         <Description>
-          <Title className="Title">{Mock.Title}</Title>
-          <p>{Mock.Description}</p>
+          <span>{Mock.Description}</span>
         </Description>
       </Content>
     </Container>

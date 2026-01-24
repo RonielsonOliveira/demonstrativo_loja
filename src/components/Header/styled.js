@@ -8,7 +8,7 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px; /* Espaço entre imagem e link */
+  gap: 30px;
 
   span {
     color: ${colors.textcolor};
@@ -37,7 +37,6 @@ export const Nav = styled.nav`
     a {
       font-size: 0px;
     }
-
     img {
       width: 120px;
     }

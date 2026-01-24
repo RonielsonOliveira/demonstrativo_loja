@@ -6,7 +6,7 @@ export const Title = styled.h1`
   font-size: 30px;
   margin: 16px auto;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   font-family: sans-serif;
   font-weight: bold;
   color: ${colors.textcolor};
@@ -76,7 +76,7 @@ export const Grid = styled.div`
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media (max-width: 480px) {
@@ -85,25 +85,81 @@ export const Grid = styled.div`
 `;
 
 export const Button = styled.button`
+  position: relative;
   margin-top: 24px;
-  background-color: ${colors.primaryColor};
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 14px 28px;
-  border: 3px solid ${colors.textcolor};
-  border-radius: 10px;
+  padding: 14px 32px;
+
+  background: linear-gradient(
+    135deg,
+    ${colors.textcolor},
+    ${colors.textcolor}cc
+  );
+
+  color: ${colors.primaryColor};
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  border: 2px solid ${colors.textcolor};
+  border-radius: 12px;
+
   cursor: pointer;
-  transition: 0.3s ease;
+  outline: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* brilho base */
+  box-shadow:
+    0 0 14px ${colors.textcolor}55,
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+
+  /* reflexo */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      120deg,
+      transparent 25%,
+      rgba(255, 255, 255, 0.45),
+      transparent 70%
+    );
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
 
   &:hover {
-    background: ${colors.textcolor};
-    color: ${colors.primaryColor};
-    transform: scale(1.05);
+    /* ✨ MAIS BRILHO */
+    filter: brightness(1.1) saturate(1.05);
+    transform: translateY(-2px) scale(1.04);
+
+    &::before {
+      opacity: 0.85;
+    }
+  }
+
+  &:active {
+    transform: scale(0.97);
+    filter: brightness(1.05);
+  }
+
+  &:focus-visible {
+    outline: 3px solid ${colors.textcolor};
+    outline-offset: 3px;
   }
 
   @media (max-width: 768px) {
     width: 80%;
+    font-size: 18px;
+    padding: 12px 24px;
   }
 `;
 
