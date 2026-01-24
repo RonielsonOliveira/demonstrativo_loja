@@ -1,109 +1,61 @@
 import styled from "styled-components";
 import * as colors from "../../config/colors";
-export const NavFooter = styled.footer`
-  background: ${colors.primaryColor};
-  color: #fff;
-  padding: 15px;
-  width: 100%;
-  height: 150px;
-  text-align: center;
 
-  a {
-    color: #fff;
-    margin: 0 10px 0 0;
-    font-weight: bold;
-  }
-  div {
-    justify-content: space-between;
-  }
-`;
 export const Title = styled.h1`
   text-align: center;
   font-size: 30px;
-  margin: 10px auto 5px auto; //topo/ esquerda/ bottom / direita
-  width: 60%;
+  margin: 16px auto;
+  width: 100%;
+  max-width: 800px;
   font-family: sans-serif;
   font-weight: bold;
   color: ${colors.textcolor};
 
   @media (max-width: 768px) {
-    font-size: 20px;
-    width: 80%;
-    height: 20%;
-    margin-top: 2px;
-    margin-bottom: 5px;
+    font-size: 22px;
   }
+`;
 
-  @media (max-width: 480px) {
-    margin-top: 2px;
-    margin-bottom: 5px;
+export const GridContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 32px auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
 export const Content = styled.div`
-  font-size: 20px;
-  font-family: sans-serif;
-  margin-top: 10px;
-  margin: 0 auto;
+  flex: 1;
+  max-width: 520px;
+  font-size: 18px;
   line-height: 1.7;
-  flex: 1;
-
-  min-width: 260px;
   color: #fff;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-  @media (max-width: 768px) {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 2px auto;
-    gap: 40px;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: column;
-    img {
-      margin-top: 5px;
-      width: 40%;
-    }
-  }
-  @media (max-width: 480px) {
-    width: 80%;
 
-    img {
-      margin-top: 5px;
-      width: 50%;
-    }
+  @media (max-width: 768px) {
+    text-align: center;
   }
 `;
+
 export const GridBlock = styled.div`
+  flex: 1;
   display: flex;
-  margin-top: 10px;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  flex: 1;
 `;
 
-export const SliderBlock = styled.div`
-  display: flex;
-  margin-top: 10px;
-  margin-top: 60px;
-
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  flex: 1;
-`;
 export const Grid = styled.div`
-  display: flex;
-  gap: 24px;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  align-items: flex-start;
-  flex: 1;
-  min-width: 200px;
+  gap: 24px;
+  width: 100%;
+  max-width: 420px;
 
   figure {
     display: flex;
@@ -113,102 +65,78 @@ export const Grid = styled.div`
   }
 
   img {
-    width: 100%;
-    max-width: 140px;
-    height: auto;
+    width: 120px;
+    transition: 0.3s ease;
   }
 
   figcaption {
-    margin-top: 12px;
-    font-size: 18px;
+    margin-top: 8px;
+    font-size: 16px;
     color: #fff;
-    font-weight: 300;
-  }
-
-  @media (max-width: 1024px) {
-    flex-wrap: wrap;
-  }
-`;
-export const GridContent = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 50px 40px auto;
-  gap: 10px;
-  justify-content: center;
-  width: 100%;
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
   }
 
   @media (max-width: 768px) {
-    margin-top: 10px;
-    flex-direction: column;
-    text-align: center;
-    img {
-      margin-top: 5px;
-      width: 70%;
-    }
+    grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 480px) {
-    width: 80%;
 
-    img {
-      margin-top: 5px;
-      width: 70%;
-    }
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
   }
 `;
 
 export const Button = styled.button`
+  margin-top: 24px;
   background-color: ${colors.primaryColor};
   color: #fff;
-  font-size: 38px;
+  font-size: 24px;
   font-weight: bold;
-  padding: 12px 24px;
+  padding: 14px 28px;
   border: 3px solid ${colors.textcolor};
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 20px;
-  margin: 20px auto;
-  display: block;
+  transition: 0.3s ease;
 
   &:hover {
+    background: ${colors.textcolor};
     color: ${colors.primaryColor};
-    background-color: ${colors.textcolor};
-    transform: scale(1.15);
+    transform: scale(1.05);
   }
-  &:active {
-    transform: scale(0.98);
-  }
+
   @media (max-width: 768px) {
-    border-radius: 10px;
     width: 80%;
-    padding: 10px;
-  }
-  @media (max-width: 480px) {
-    border-radius: 100px;
-    width: 80%;
-    padding: 5px;
   }
 `;
+
+export const SliderBlock = styled.div`
+  margin: 48px auto;
+  width: 100%;
+  max-width: 1200px;
+`;
+
 export const Info = styled.div`
+  margin: 40px auto;
+`;
+
+export const ContactGrid = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 48px;
   justify-content: center;
-  flex-wrap: wrap;
+
+  figure {
+    text-align: center;
+  }
+  figcaption {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #fff;
+  }
+
   img {
-    width: 150px;
-    border-radius: 12px;
-    object-fit: cover;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-    }
+    width: 120px;
+    transition: 0.3s ease;
+  }
+
+  img:hover {
+    transform: scale(1.1);
   }
 `;
