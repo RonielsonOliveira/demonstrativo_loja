@@ -13,17 +13,12 @@ export const Form = styled.form`
   flex-direction: column;
   width: 400px;
 
-  @media (max-width: 768px){
-      width: 95%;
-
-  
+  @media (max-width: 768px) {
+    width: 95%;
   }
   @media (max-width: 480px) {
-        width: 95%;
-       
-    
+    width: 95%;
   }
-  
 
   input {
     height: 40px;
@@ -35,7 +30,7 @@ export const Form = styled.form`
     padding: 0 10px;
     align-items: center;
   }
-  textarea{
+  textarea {
     border-radius: 4px;
   }
   button {
@@ -43,33 +38,29 @@ export const Form = styled.form`
     margin-top: 15px;
     background-color: ${textcolor};
     color: ${primaryColor};
-     align-items: center;
-     width: 300px;
+    align-items: center;
+    width: 300px;
 
-      @media (max-width: 768px){
+    @media (max-width: 768px) {
       width: 95%;
-
-  
-  }
+    }
     @media (max-width: 480px) {
-        width: 95%;
-        margin-bottom: 15px;
-       
-    
+      width: 95%;
+      margin-bottom: 15px;
+    }
   }
-  }
-  select{
+  select {
     padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
- margin-bottom: 10px;
-  font-size: 16px;
-  width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 100%;
   }
-  a{
+  a {
     text-align: center;
   }
-  label{
+  label {
     text-align: center;
     padding: 10px;
     font-size: 20px;
@@ -77,82 +68,67 @@ export const Form = styled.form`
   }
 `;
 
-
 export const Content = styled.div`
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 80px;
-      margin-top: 10px;
-      margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 
-      @media (max-width: 768px){
-     flex-direction: column-reverse;
-     img{
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    img {
       margin-top: 5px;
-        width: 50%;
-       }
-
-  
+      width: 50%;
+    }
   }
-    @media (max-width: 480px) {
-      flex-direction: column-reverse;
-      height: 100%;
-      margin: 0 auto;
-      
-      justify-content: center;
-      align-items: center;
-      justify-content: center;
-      width: 80%;
-      
+  @media (max-width: 480px) {
+    flex-direction: column-reverse;
+    height: 100%;
+    margin: 0 auto;
 
-       img{
-        margin-top: 5px;
-        width: 50%;
-       }
-       a{
-        font-size: 18px;
-       }
-    
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+
+    img {
+      margin-top: 5px;
+      width: 50%;
+    }
+    a {
+      font-size: 18px;
+    }
   }
-    
-    
-`
+`;
 export const Description = styled.div`
-    width: 400px;
-   @media (max-width: 768px){
-      width: 90%;
+  width: 400px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+  @media (max-width: 480px) {
+    width: 90%;
+  }
 
-  
-  }
-    @media (max-width: 480px) {
-        width: 90%;
-    
-  }
-  
   .Title {
     color: ${textcolor};
     margin-top: 5px;
-    
   }
-  a {  
-    color: #fff
-  
-
-}
-`
+  p {
+    color: #fff;
+  }
+`;
 
 export const Checkbox = styled.div`
-  margin: 10px  0;
+  margin: 10px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  label{
+  label {
     display: flex;
     justify-content: center;
     cursor: pointer;
-    
-    
   }
   input[type="checkbox"] {
     appearance: none;
@@ -166,20 +142,17 @@ export const Checkbox = styled.div`
     position: relative;
     transition: 0.2s;
   }
-    input[type="checkbox"]:checked {
-      background-color: ${primaryColor};
-      border-color: #0080ff;
+  input[type="checkbox"]:checked {
+    background-color: ${primaryColor};
+    border-color: #0080ff;
   }
-      input[type="checkbox"]:checked::after {
-        content: "✓";
-        color: ${textcolor};
-        font-size: 16px;
-        font-weight: bold;
-        position: absolute;
-        top: -2px;
-        left: 4px;
+  input[type="checkbox"]:checked::after {
+    content: "✓";
+    color: ${textcolor};
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: -2px;
+    left: 4px;
   }
-
-
- 
-`
+`;

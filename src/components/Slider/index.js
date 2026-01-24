@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 
 import { Image, Modal, ModalImage, SliderContainer } from "./styled";

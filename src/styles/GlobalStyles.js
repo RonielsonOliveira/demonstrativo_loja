@@ -1,11 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import {
-  primaryColor,
-  primaryDarkColor,
-  errorColor,
-  successColor,
-  textcolor
-} from "../config/colors";
+import { primaryColor, primaryDarkColor, textcolor } from "../config/colors";
 import "react-toastify/dist/ReactToastify.css";
 
 export default createGlobalStyle`
@@ -110,29 +104,27 @@ export const Container = styled.section`
   text-align: center;
 
   padding: 30px;
-  margin: 10px auto ;
+  margin: 10px auto;
   box-shadow: 0 0 10px rgba(44, 20, 20, 0.1);
   border-radius: 15px;
 
+  @media (max-width: 768px) {
+    .slick-slide {
+      height: auto !important;
+    }
 
+    .slick-track {
+      display: flex !important;
+    }
 
-  @media (max-width: 768px){
-     .slick-slide {
-  height: auto !important;
-}
-
-.slick-track {
-  display: flex !important;
-}
-
-.slick-slide > div {
-  margin: 0 auto;
-  width: 100%;
-}
-      max-width: 500px;
+    .slick-slide > div {
+      margin: 0 auto;
+      width: 100%;
+    }
+    max-width: 500px;
     width: 100%;
     padding: 10px;
-  
+
     a {
       font-size: 15px;
     }
@@ -140,22 +132,22 @@ export const Container = styled.section`
       width: 100%;
     }
   }
-    @media (max-width: 480px) {
-       .slick-slide {
-  height: auto !important;
-}
+  @media (max-width: 480px) {
+    .slick-slide {
+      height: auto !important;
+    }
 
-.slick-track {
-  display: flex !important;
-}
+    .slick-track {
+      display: flex !important;
+    }
 
-.slick-slide > div {
-  margin: 0 auto;
-  width: 100%;
-}
-      
+    .slick-slide > div {
+      margin: 0 auto;
       width: 100%;
-      padding: 5px;
+    }
+
+    width: 100%;
+    padding: 5px;
     a {
       font-size: 15px;
     }
@@ -164,5 +156,4 @@ export const Container = styled.section`
       width: 100%;
     }
   }
-   
 `;

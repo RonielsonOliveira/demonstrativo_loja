@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { Container, button } from "../../styles/GlobalStyles.js";
+import { Container } from "../../styles/GlobalStyles.js";
 import { Form, Title, Content, Description, Checkbox } from "./styled.js";
 import Mock from "../../pages/Orcamento/orcamentoMock.json";
 import CleaveInput from "./CleaveInput.js";
@@ -46,6 +46,7 @@ export default function Aluno() {
     if (forErrors) return;
 
     toast.success("Informacoes enviadas entraremos em contato");
+    navigate("/");
     window.open(url, "_blank");
     console.log({ ...data, servico: servicosSelecionados });
   };
@@ -114,7 +115,7 @@ export default function Aluno() {
         </Form>
         <Description>
           <Title className="Title">{Mock.Title}</Title>
-          <a>{Mock.Description}</a>
+          <p>{Mock.Description}</p>
         </Description>
       </Content>
     </Container>
