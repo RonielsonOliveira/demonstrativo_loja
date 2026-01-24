@@ -1,6 +1,15 @@
 import React from "react";
 import { Container } from "../../styles/GlobalStyles.js";
-import { Content, Title, Button, Grid, Info } from "./styled.js";
+import {
+  GridBlock,
+  Content,
+  Title,
+  Button,
+  Grid,
+  Info,
+  GridContent,
+  SliderBlock,
+} from "./styled.js";
 
 import { Link } from "react-router-dom";
 import pinturaLogo from "../../Img/pintura.png";
@@ -21,28 +30,31 @@ export default function Contato() {
   return (
     <Container>
       <Title>{Mock.Title1}</Title>
-      <Content>{Mock.descricao}</Content>
-      <Link to="/orcamento">
-        <Button>Faca seu orcamento</Button>
-      </Link>
-      <Title>{Mock.Title2}</Title>
-      <Grid>
-        <figure>
-          <img src={pinturaLogo} alt="" />
-          <figcaption>Pintura</figcaption>
-        </figure>
-        <figure>
-          <img src={marcenariaLogo} alt="" />
-          <figcaption>Marcenaria</figcaption>
-        </figure>
-        <figure>
-          <img src={reformaLogo} alt="" />
-          <figcaption>Reformas em geral</figcaption>
-        </figure>
-      </Grid>
-      <Title>Servicos ja feitos</Title>
-      <ImageSlider images={imagens} />
-
+      <GridContent>
+        <Content>{Mock.descricao}</Content>
+        <GridBlock>
+          <Grid>
+            <figure>
+              <img src={pinturaLogo} alt="" />
+              <figcaption>Pintura</figcaption>
+            </figure>
+            <figure>
+              <img src={marcenariaLogo} alt="" />
+              <figcaption>Marcenaria</figcaption>
+            </figure>
+            <figure>
+              <img src={reformaLogo} alt="" />
+              <figcaption>Reformas em geral</figcaption>
+            </figure>
+          </Grid>
+          <Link to="/orcamento">
+            <Button>Faca seu orcamento</Button>
+          </Link>
+        </GridBlock>
+      </GridContent>
+      <SliderBlock>
+        <ImageSlider images={imagens} />
+      </SliderBlock>
       <Title>Contato</Title>
       <Info>
         <Grid>

@@ -7,14 +7,11 @@ export default createGlobalStyle`
    
    
     outline: none;
-    
-   
   }
 
   html, body, #root {
     
     margin: 0;
- 
   }
 
   body {   
