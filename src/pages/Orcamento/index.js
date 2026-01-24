@@ -82,7 +82,7 @@ export default function Aluno() {
               resize: "vertical",
               overflow: "auto",
             }}
-            placeholder="Descreva com mais detalhes o que voce necessita"
+            placeholder="Descreva com mais detalhes o que você necessita"
           />
           <label className="titulo-servico">Selecione o(s) serviço(s)</label>
           <Checkbox>
@@ -103,7 +103,7 @@ export default function Aluno() {
               ></input>
             </label>
             <label>
-              Hidraulica
+              Hidráulica
               <input
                 type="checkbox"
                 name="servico"
