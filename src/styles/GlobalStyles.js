@@ -5,15 +5,31 @@ import "react-toastify/dist/ReactToastify.css";
 export default createGlobalStyle`
   *{
     outline: none;
+      margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   }
   html, body, #root {
-    margin: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background: #030517;
+  line-height: 1.5;
+  overflow-x: hidden;
   }
+  html {
+  scroll-behavior: smooth;
+}
   body {   
     font-family: sans-serif;
     background: ${primaryDarkColor};
     color: black;  
   }
+
+
+
+
   #root {
     min-height: 100vh; 
      background-color:black;

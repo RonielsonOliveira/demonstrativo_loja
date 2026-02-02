@@ -7,15 +7,52 @@ export const SliderContainer = styled.div`
   width: 80%;
   height: 600px;
   position: relative;
+  .slick-prev,
+  .slick-next {
+    z-index: 10;
+  }
+
+  .slick-prev::before,
+  .slick-next::before {
+    font-size: 30px;
+    color: white;
+  }
+  @media (max-width: 768px) {
+    width: 80%;
+    margin-left: 5px;
+
+    .slick-prev,
+    .slick-next {
+      display: none !important;
+    }
+    .slick-slide {
+      width: 100% !important;
+    }
+
+    .slick-track {
+      display: flex;
+    }
+  }
+  @media (max-width: 768px) {
+    .slick-list {
+      overflow: visible;
+    }
+  }
 `;
 
 export const Image = styled.img`
-  width: 100% !important;
-  height: 500px;
-  orientation: 16 / 9;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 15px;
+  margin-left: 5%;
   cursor: pointer;
   transition: transform 0.3s;
+  @media (max-width: 768px) {
+    .slick-list {
+      overflow: hidden;
+    }
+  }
 
   &:hover {
     transform: scale(1.05);
@@ -35,11 +72,16 @@ export const Modal = styled.div`
   z-index: 999;
 `;
 export const ImageWrapper = styled.div`
-  position: relative;
-  width: 99%;
-  height: 500px;
+  width: 100%;
+  height: 420px;
   border-radius: 15px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
 `;
 
 export const ModalImage = styled.img`

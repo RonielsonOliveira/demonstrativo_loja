@@ -8,11 +8,8 @@ import {
   SliderBlock,
   ContactGrid,
   FloatingCTA,
-  SliderWrapper,
   Figure,
   GridInner,
-  GridTrack,
-  FloatingCTALeft,
 } from "./styled.js";
 
 import { Link } from "react-router-dom";
@@ -51,50 +48,22 @@ export default function Contato() {
           <Button>Entre em contato</Button>
         </Link>
       </FloatingCTALeft> */}
-      <SliderWrapper>
-        <GridTrack>
-          <GridInner>
-            <Figure>
-              <img src={pinturaLogo} alt="Pintura" />
-              <figcaption>Pintura</figcaption>
-            </Figure>
-            <Figure>
-              <img src={reformaLogo} alt="Reformas" />
-              <figcaption>Reformas em geral</figcaption>
-            </Figure>
-          </GridInner>
-          <GridInner>
-            <Figure>
-              <img src={pinturaLogo} alt="Pintura" />
-              <figcaption>Pintura</figcaption>
-            </Figure>
-            <Figure>
-              <img src={reformaLogo} alt="Reformas" />
-              <figcaption>Reformas em geral</figcaption>
-            </Figure>
-          </GridInner>
-          <GridInner>
-            <Figure>
-              <img src={pinturaLogo} alt="Pintura" />
-              <figcaption>Pintura</figcaption>
-            </Figure>
-            <Figure>
-              <img src={reformaLogo} alt="Reformas" />
-              <figcaption>Reformas em geral</figcaption>
-            </Figure>
-          </GridInner>
-          <GridInner>
-            <Figure>
-              <img src={pinturaLogo} alt="Pintura" />
-              <figcaption>Pintura</figcaption>
-            </Figure>
-            <Figure>
-              <img src={reformaLogo} alt="Reformas" />
-              <figcaption>Reformas em geral</figcaption>
-            </Figure>
-          </GridInner>
-        </GridTrack>
-      </SliderWrapper>
+
+      <GridInner>
+        <Figure>
+          <img src={pinturaLogo} alt="Pintura" />
+          <figcaption>Pintura</figcaption>
+        </Figure>
+        <Figure>
+          <img src={reformaLogo} alt="Reformas" />
+          <figcaption>Reformas em geral</figcaption>
+        </Figure>
+        <Figure>
+          <img src={reformaLogo} alt="Reformas" />
+          <figcaption>Reformas em geral</figcaption>
+        </Figure>
+      </GridInner>
+
       <Title>Contato</Title>
 
       <Info>

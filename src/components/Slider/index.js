@@ -19,12 +19,15 @@ export default function ImageSlider({ images }) {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "0px",
+    arrows: true,
     responsive: [
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           centerMode: false,
+          arrows: false,
         },
       },
       {

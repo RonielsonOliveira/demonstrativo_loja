@@ -3,107 +3,72 @@ import * as colors from "../../config/colors";
 
 export const Title = styled.h1`
   text-align: center;
-  font-size: 30px;
+  font-size: clamp(20px, 4vw, 32px);
   margin: 16px auto;
   max-width: 900px;
   font-family: sans-serif;
   font-weight: bold;
   color: ${colors.textcolor};
-
-  @media (max-width: 768px) {
-    font-size: 22px;
-  }
+  padding: 0 16px;
 `;
 
 export const Content = styled.div`
-  width: 85%;
+  width: min(85%, 900px);
   margin: 0 auto;
-  font-size: 24px;
+  font-size: clamp(16px, 2.8vw, 24px);
   line-height: 1.7;
   color: #fff;
-
-  @media (max-width: 768px) {
-    text-align: center;
-    font-size: 20px;
-  }
+  text-align: center;
+  padding: 0 16px;
 `;
 
 export const SliderWrapper = styled.div`
   width: 100%;
-  overflow: hidden;
-  margin: 60px 0;
-`;
+  margin: 48px 0;
 
-export const GridTrack = styled.div`
-  display: flex;
-  width: fit-content;
-  animation: scroll 5s linear infinite;
-  will-change: auto;
-
-  &:hover {
-    animation-play-state: paused;
-  }
-
-  @keyframes scroll {
-    from {
-      transform: translate3d(0, 0, 0);
-    }
-    to {
-      transform: translate3d(-25%, 0, 0);
-    }
+  @media (max-width: 768px) {
+    margin: 32px 0;
   }
 `;
 
 export const GridInner = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px auto;
 `;
 
 export const Figure = styled.figure`
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 25px;
-  margin: -25px;
+  text-align: center;
 
   img {
-    width: 300px;
+    width: clamp(180px, 40vw, 250px);
+    max-width: 100%;
     transition: transform 0.3s ease;
-    will-change: transform;
   }
 
   figcaption {
-    position: absolute;
-    bottom: 15px;
-
-    padding: 10px 16px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #000;
+    margin-top: 10px;
+    padding: 8px 12px;
+    color: ${colors.textcolor};
     font-weight: 700;
-    border-radius: 10px;
-
-    opacity: 0;
-    transform: translateY(10px);
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s ease;
-
-    pointer-events: none;
+    font-size: clamp(14px, 2.5vw, 16px);
   }
 
-  &:hover figcaption {
-    opacity: 1;
-    transform: translateY(0);
+  @media (hover: hover) {
+    img:hover {
+      transform: scale(1.05);
+    }
   }
 `;
 
 export const FloatingCTA = styled.div`
   position: fixed;
-
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 20px;
   z-index: 999;
 
   animation: float 3s ease-in-out infinite;
@@ -122,63 +87,59 @@ export const FloatingCTA = styled.div`
 
   a {
     text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    right: 12px;
+    bottom: 12px;
   }
 `;
 
 export const FloatingCTALeft = styled.div`
   position: fixed;
-  bottom: 30px;
-  left: 30px;
+  bottom: 20px;
+  left: 20px;
   z-index: 999;
 
   animation: float 3s ease-in-out infinite;
 
-  @keyframes float {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-6px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-  a {
-    text-decoration: none;
+  @media (max-width: 768px) {
+    left: 12px;
+    bottom: 12px;
   }
 `;
 
 export const Button = styled.button`
-  padding: 20px 36px;
-  font-size: 1.2rem;
+  padding: 16px 28px;
+  font-size: clamp(14px, 4vw, 18px);
   font-weight: 700;
-  min-width: 240px;
+  min-width: 200px;
 
   background: linear-gradient(135deg, #ff7a18, #ffb347);
   color: #fff;
-
   border: none;
   border-radius: 40px;
   cursor: pointer;
 
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
 
-  &:hover {
-    transform: scale(1.07);
-    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.06);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    }
   }
 `;
 
 export const ContactGrid = styled.div`
   display: flex;
-  gap: 48px;
+  gap: 32px;
   justify-content: center;
-  margin: 40px 0;
+  flex-wrap: wrap;
+  margin: 32px 0;
 
   figure {
     text-align: center;
@@ -186,31 +147,43 @@ export const ContactGrid = styled.div`
 
   figcaption {
     margin-top: 8px;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
   }
 
   img {
-    width: 120px;
+    width: clamp(80px, 25vw, 120px);
     transition: transform 0.3s ease;
   }
 
-  img:hover {
-    transform: scale(1.1);
+  @media (hover: hover) {
+    img:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 
 export const SliderBlock = styled.div`
-  margin: 48px auto;
+  margin: 32px auto;
   width: 100%;
   max-width: 1200px;
+  max-height: 450px;
+  padding: 0 10px;
+  @media (max-width: 768px) {
+    max-height: 350px;
+    left: 12px;
+    bottom: 12px;
+  }
 `;
+
 export const GridBlock = styled.div`
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
+
 export const Info = styled.div`
-  margin: 40px auto;
+  margin: 32px auto;
+  padding: 0 16px;
+  max-width: 900px;
 `;

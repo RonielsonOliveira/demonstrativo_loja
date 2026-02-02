@@ -95,11 +95,11 @@ export default function Aluno() {
               <input type="checkbox" name="servico" value="Pintura"></input>
             </label>
             <label>
-              Marcenaria
+              Cubas em porcelanato
               <input
                 type="checkbox"
                 name="servico"
-                value="Instalação elétrica"
+                value="Cubas em porcelanato"
               ></input>
             </label>
             <label>
