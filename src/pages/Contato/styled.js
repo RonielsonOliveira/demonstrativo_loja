@@ -12,7 +12,7 @@ export const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 64px;
+  gap: 24px;
   width: 100%;
   max-width: 1200px;
   margin: 32px auto;
@@ -26,11 +26,12 @@ export const Content = styled.div`
 
 export const Contatos = styled.div`
   width: 100%;
-  padding: 10px;
+  padding: 8px; /* menos respiro */
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 14px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
+  gap: 8px; /* cards mais próximos */
+  justify-content: center;
 `;
 export const ContatoCard = styled.div`
   background-color: beige;

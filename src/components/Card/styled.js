@@ -8,22 +8,28 @@ export const CardsContainer = styled.section`
   justify-items: center;
 `;
 
-export const Info = styled.article`
+export const Info = styled.div`
   width: 100%;
-  max-width: 360px;
+  max-width: 240px;
+  height: 220px; /* altura padronizada */
+
   background: #111827;
   color: #f9fafb;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 16px;
+
   padding: 30px;
   border-radius: 16px;
   position: relative;
+
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
+
+  overflow: hidden; /* impede estouro */
 
   &:hover {
     transform: scale(1.05);
@@ -133,11 +139,15 @@ export const Title = styled.h2`
 `;
 export const Description = styled.p`
   font-size: 15px;
+  width: 100%;
+  min-height: 80px;
+  max-height: 120px;
   line-height: 1.4;
   color: #d1d5db;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: center;
   align-items: center;
   gap: 12px;
+  overflow: hidden;
 `;
