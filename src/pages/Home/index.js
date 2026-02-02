@@ -46,11 +46,11 @@ export default function Contato() {
           <Button>Faça seu orçamento</Button>
         </Link>
       </FloatingCTA>
-      <FloatingCTALeft>
+      {/* <FloatingCTALeft>
         <Link to="/contato">
           <Button>Entre em contato</Button>
         </Link>
-      </FloatingCTALeft>
+      </FloatingCTALeft> */}
       <SliderWrapper>
         <GridTrack>
           <GridInner>
