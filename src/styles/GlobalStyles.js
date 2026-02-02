@@ -72,13 +72,12 @@ export default createGlobalStyle`
   }
 `;
 export const Container = styled.section`
-  background-color: ${primaryColor};
-  width: 80%;
+  background-color: ${primaryDarkColor};
+  width: 100%;
   text-align: center;
   padding: 30px;
-  margin: 10px auto;
+
   box-shadow: 0 0 10px rgba(44, 20, 20, 0.1);
-  border-radius: 15px;
 
   @media (max-width: 768px) {
     .slick-slide {

@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
+import {
+  Image,
+  ImageWrapper,
+  Modal,
+  ModalImage,
+  SliderContainer,
+} from "./styled";
 
-import { Image, Modal, ModalImage, SliderContainer } from "./styled";
 export default function ImageSlider({ images }) {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -9,7 +15,7 @@ export default function ImageSlider({ images }) {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "0px",
@@ -36,11 +42,13 @@ export default function ImageSlider({ images }) {
       <Slider {...settings}>
         {images.map((img, index) => (
           <div key={index}>
-            <Image
-              src={img}
-              alt={`Imagem ${index}`}
-              onClick={() => setSelectedImage(img)}
-            />
+            <ImageWrapper>
+              <Image
+                src={img}
+                alt={`Imagem ${index}`}
+                onClick={() => setSelectedImage(img)}
+              />
+            </ImageWrapper>
           </div>
         ))}
       </Slider>

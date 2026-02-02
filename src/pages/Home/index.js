@@ -1,21 +1,23 @@
 import React from "react";
 import { Container } from "../../styles/GlobalStyles.js";
 import {
-  GridBlock,
   Content,
   Title,
   Button,
-  Grid,
   Info,
-  GridContent,
   SliderBlock,
   ContactGrid,
+  FloatingCTA,
+  SliderWrapper,
+  Figure,
+  GridInner,
+  GridTrack,
+  FloatingCTALeft,
 } from "./styled.js";
 
 import { Link } from "react-router-dom";
 import pinturaLogo from "../../Img/pintura.png";
 import reformaLogo from "../../Img/reforma.png";
-import marcenariaLogo from "../../Img/marcenaria.png";
 import ImageSlider from "../../components/Slider/index.js";
 import instagramLogo from "../../Img/instagram.png";
 import whatsapplogo from "../../Img/whatsapp.png";
@@ -35,37 +37,64 @@ export default function Contato() {
     <Container>
       <Title>{Mock.Title1}</Title>
 
-      <GridContent>
-        <Content>{Mock.descricao}</Content>
-
-        <GridBlock>
-          <Grid>
-            <figure>
-              <img src={pinturaLogo} alt="Pintura" />
-              <figcaption>Pintura</figcaption>
-            </figure>
-
-            <figure>
-              <img src={marcenariaLogo} alt="Marcenaria" />
-              <figcaption>Marcenaria</figcaption>
-            </figure>
-
-            <figure>
-              <img src={reformaLogo} alt="Reformas" />
-              <figcaption>Reformas em geral</figcaption>
-            </figure>
-          </Grid>
-
-          <Link to="/orcamento">
-            <Button>Faça seu orçamento</Button>
-          </Link>
-        </GridBlock>
-      </GridContent>
-
       <SliderBlock>
         <ImageSlider images={imagens} />
       </SliderBlock>
-
+      <Content>{Mock.descricao}</Content>
+      <FloatingCTA>
+        <Link to="/orcamento">
+          <Button>Faça seu orçamento</Button>
+        </Link>
+      </FloatingCTA>
+      <FloatingCTALeft>
+        <Link to="/contato">
+          <Button>Entre em contato</Button>
+        </Link>
+      </FloatingCTALeft>
+      <SliderWrapper>
+        <GridTrack>
+          <GridInner>
+            <Figure>
+              <img src={pinturaLogo} alt="Pintura" />
+              <figcaption>Pintura</figcaption>
+            </Figure>
+            <Figure>
+              <img src={reformaLogo} alt="Reformas" />
+              <figcaption>Reformas em geral</figcaption>
+            </Figure>
+          </GridInner>
+          <GridInner>
+            <Figure>
+              <img src={pinturaLogo} alt="Pintura" />
+              <figcaption>Pintura</figcaption>
+            </Figure>
+            <Figure>
+              <img src={reformaLogo} alt="Reformas" />
+              <figcaption>Reformas em geral</figcaption>
+            </Figure>
+          </GridInner>
+          <GridInner>
+            <Figure>
+              <img src={pinturaLogo} alt="Pintura" />
+              <figcaption>Pintura</figcaption>
+            </Figure>
+            <Figure>
+              <img src={reformaLogo} alt="Reformas" />
+              <figcaption>Reformas em geral</figcaption>
+            </Figure>
+          </GridInner>
+          <GridInner>
+            <Figure>
+              <img src={pinturaLogo} alt="Pintura" />
+              <figcaption>Pintura</figcaption>
+            </Figure>
+            <Figure>
+              <img src={reformaLogo} alt="Reformas" />
+              <figcaption>Reformas em geral</figcaption>
+            </Figure>
+          </GridInner>
+        </GridTrack>
+      </SliderWrapper>
       <Title>Contato</Title>
 
       <Info>
