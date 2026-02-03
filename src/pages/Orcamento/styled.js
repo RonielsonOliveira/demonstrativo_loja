@@ -3,7 +3,7 @@ import * as colors from "../../config/colors";
 
 export const Title = styled.h1`
   margin: 20px auto;
-  color: ${colors.textcolor};
+  color: #e6e6e6;
   text-align: center;
   font-size: 28px;
 `;
@@ -26,8 +26,7 @@ export const Content = styled.div`
 
 export const Description = styled.div`
   max-width: 420px;
-  color: #fff;
-
+  color: #e6e6e6;
   span {
     font-size: 20px;
     line-height: 1.6;
@@ -49,6 +48,7 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 16px;
   width: 100%;
+  color: #e6e6e6;
   max-width: 400px;
 
   @media (max-width: 768px) {
@@ -57,7 +57,7 @@ export const Form = styled.form`
 
   label {
     font-size: 18px;
-    color: ${colors.textcolor};
+    color: #e6e6e6;
     text-align: center;
   }
 
@@ -69,93 +69,41 @@ export const Form = styled.form`
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 16px;
+    color: #e6e6e6;
   }
 
   textarea {
     min-height: 120px;
     resize: vertical;
+    color: #2e2e2e;
   }
 
   button {
-    position: relative;
-    margin-top: 24px;
-    margin: 0 auto;
-    padding: 14px 32px;
+    padding: 16px 28px;
+    font-size: clamp(14px, 4vw, 18px);
+    font-weight: 700;
+    min-width: 200px;
 
-    background: linear-gradient(
-      135deg,
-      ${colors.textcolor},
-      ${colors.textcolor}cc
-    );
-
-    color: ${colors.primaryColor};
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-
-    border: 2px solid ${colors.textcolor};
-    border-radius: 12px;
-
+    background: #f2a900;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
     cursor: pointer;
-    outline: none;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow:
-      0 0 14px ${colors.textcolor}55,
-      inset 0 1px 0 rgba(255, 255, 255, 0.25);
-
-    transition:
-      transform 0.25s ease,
-      filter 0.25s ease;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      background: linear-gradient(
-        120deg,
-        transparent 25%,
-        rgba(255, 255, 255, 0.45),
-        transparent 70%
-      );
-      opacity: 0.5;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
+    a {
+      text-decoration: none;
     }
 
-    &:hover {
-      filter: brightness(1.15) saturate(1.1);
-      transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
 
-      &::before {
-        opacity: 0.85;
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.06);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
       }
     }
-
-    &:active {
-      transform: scale(0.97);
-      filter: brightness(1.05);
-    }
-
-    &:focus-visible {
-      outline: 3px solid ${colors.textcolor};
-      outline-offset: 3px;
-    }
-
-    @media (max-width: 768px) {
-      width: 80%;
-      font-size: 18px;
-      padding: 12px 24px;
-    }
-  }
-
-  a {
-    text-align: center;
-    font-size: 16px;
   }
 `;
 
@@ -171,14 +119,14 @@ export const Checkbox = styled.div`
     justify-content: space-between;
     cursor: pointer;
     font-size: 16px;
-    color: #fff;
+    color: #e6e6e6;
   }
 
   input[type="checkbox"] {
     appearance: none;
     width: 20px;
     height: 20px;
-    border: 2px solid #555;
+    border: 2px solid #f2a900;
     border-radius: 4px;
     cursor: pointer;
     position: relative;
@@ -186,8 +134,8 @@ export const Checkbox = styled.div`
   }
 
   input[type="checkbox"]:checked {
-    background-color: ${colors.primaryColor};
-    border-color: ${colors.primaryColor};
+    background-color: #3a3f45;
+    border-color: #3a3f45;
   }
 
   input[type="checkbox"]:checked::after {

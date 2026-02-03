@@ -12,7 +12,6 @@ export default createGlobalStyle`
   html, body, #root {
   margin: 0;
   width: 100%;
-  overflow-x: hidden;
   font-family: sans-serif;
   background: #030517;
   line-height: 1.5;
@@ -39,6 +38,7 @@ export default createGlobalStyle`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   button {
@@ -88,10 +88,11 @@ export default createGlobalStyle`
   }
 `;
 export const Container = styled.section`
-  background-color: ${primaryDarkColor};
+  background-color: #3a3f45;
   width: 100%;
   text-align: center;
   padding: 30px;
+  margin-top: 120px;
 
   box-shadow: 0 0 10px rgba(44, 20, 20, 0.1);
 

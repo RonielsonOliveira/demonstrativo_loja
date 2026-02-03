@@ -114,6 +114,14 @@ export default function Aluno() {
                 value="Revestimentos"
               ></input>
             </label>
+            <label>
+              Gesso Acartonado
+              <input
+                type="checkbox"
+                name="servico"
+                value="Gesso Acartonado"
+              ></input>
+            </label>
           </Checkbox>
           <button type="submit">Enviar</button>
         </Form>

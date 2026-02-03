@@ -8,7 +8,7 @@ export const Title = styled.h1`
   max-width: 900px;
   font-family: sans-serif;
   font-weight: bold;
-  color: ${colors.textcolor};
+  color: #e6e6e6;
   padding: 0 16px;
 `;
 
@@ -17,7 +17,7 @@ export const Content = styled.div`
   margin: 0 auto;
   font-size: clamp(16px, 2.8vw, 24px);
   line-height: 1.7;
-  color: #fff;
+  color: #e6e6e6;
   text-align: center;
   padding: 0 16px;
 `;
@@ -115,7 +115,7 @@ export const Button = styled.button`
   font-weight: 700;
   min-width: 200px;
 
-  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  background: #f2a900;
   color: #fff;
   border: none;
   border-radius: 40px;

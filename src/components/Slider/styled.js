@@ -9,13 +9,32 @@ export const SliderContainer = styled.div`
   position: relative;
   .slick-prev,
   .slick-next {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
     z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+  /* cor e tamanho da seta */
   .slick-prev::before,
   .slick-next::before {
-    font-size: 30px;
-    color: white;
+    font-size: 22px;
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  /* posicionamento lateral */
+  .slick-prev {
+    left: -53px;
+  }
+
+  .slick-next {
+    right: -53px;
   }
   @media (max-width: 768px) {
     width: 80%;

@@ -2,13 +2,13 @@ import styled from "styled-components";
 import * as colors from "../../config/colors";
 
 export const Nav = styled.nav`
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
-
+  left: 0;
+  width: 100%;
+  z-index: 9999;
   background: rgba(0, 0, 0, 0.45); /* translúcido */
   backdrop-filter: blur(10px);
-
   height: 110px; /* menor */
   display: flex;
   align-items: center;
