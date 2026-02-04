@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import * as colors from "../../config/colors";
 
 export const Title = styled.h1`
   margin: 20px auto;
-  color: ${colors.textcolor};
+  color: white;
   text-align: center;
   font-size: 28px;
 `;

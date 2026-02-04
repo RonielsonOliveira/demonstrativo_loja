@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import * as colors from "../../config/colors";
 
 export const Title = styled.h1`
   margin: 20px auto;
-  color: ${colors.textcolor};
+  color: white;
   width: 70%;
   border-radius: 15px;
   text-align: center;
@@ -30,7 +29,7 @@ export const Description = styled.div`
   display: flex;
   justify-items: center;
   padding: 16px;
-  color: ${colors.warningColor};
+  color: white;
 `;
 export const Image = styled.div`
   align-items: flex-end;
