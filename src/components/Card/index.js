@@ -1,4 +1,4 @@
-import { Description, Info } from "./styled";
+import { Description, Endereco, Info } from "./styled";
 import { SiAlltrails } from "react-icons/si";
 import { TbBeach } from "react-icons/tb";
 export default function Card({ cidade, endereco }) {
@@ -10,8 +10,10 @@ export default function Card({ cidade, endereco }) {
           <div>
             <SiAlltrails size={40} />
             <Description>
-              <span>{cidade}</span>
-              <span>{endereco}</span>
+              <Endereco>
+                <span>{cidade}</span>
+                <span>{endereco}</span>
+              </Endereco>
             </Description>
           </div>
         </Info>
@@ -23,8 +25,10 @@ export default function Card({ cidade, endereco }) {
           <div>
             <TbBeach size={40} />
             <Description>
-              <span>{cidade}</span>
-              <span>{endereco}</span>
+              <Endereco>
+                <span>{cidade}</span>
+                <span>{endereco}</span>
+              </Endereco>
             </Description>
           </div>
         </Info>

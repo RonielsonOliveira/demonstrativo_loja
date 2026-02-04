@@ -54,7 +54,6 @@ export default function Contato() {
       <GridInner>
         <Figure>
           <GiPaintRoller size={250} color="white" />
-
           <figcaption>Pintura</figcaption>
         </Figure>
         <Figure>
@@ -83,7 +82,7 @@ export default function Contato() {
 
       <Info>
         <ContactGrid>
-          <figure>
+          <Figure>
             <a
               href="https://www.instagram.com/belasartes.construcoes/"
               target="_blank"
@@ -92,14 +91,14 @@ export default function Contato() {
               <FaInstagram size={140} color="white" />
             </a>
             <figcaption>Instagram</figcaption>
-          </figure>
+          </Figure>
 
-          <figure>
+          <Figure>
             <a href={url} target="_blank" rel="noreferrer">
               <FaWhatsapp size={140} color="white" />
             </a>
             <figcaption>WhatsApp</figcaption>
-          </figure>
+          </Figure>
         </ContactGrid>
       </Info>
     </Container>

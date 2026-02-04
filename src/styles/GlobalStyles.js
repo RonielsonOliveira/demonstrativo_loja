@@ -137,6 +137,7 @@ export default createGlobalStyle`
     @media (max-width: 480px) {
       margin: 0 auto;
       width: 85%;
+
         margin-bottom: 15px;
   }
   }
@@ -144,10 +145,10 @@ export default createGlobalStyle`
 export const Container = styled.section`
   background-color: #3a3f45;
   width: 100%;
+  height: 100%;
   text-align: center;
   padding: 30px;
   margin-top: 120px;
-
   box-shadow: 0 0 10px rgba(44, 20, 20, 0.1);
 
   @media (max-width: 768px) {

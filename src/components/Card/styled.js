@@ -11,99 +11,34 @@ export const CardsContainer = styled.section`
 export const Info = styled.div`
   width: 100%;
   max-width: 240px;
-  height: 220px; /* altura padronizada */
+  height: 220px;
 
-  background: #111827;
+  background: rgba(0, 0, 0, 0.55);
   color: #f9fafb;
 
   display: flex;
   align-items: center;
   gap: 16px;
-
+  justify-content: center;
   padding: 30px;
-  border-radius: 16px;
+  border-radius: 2px;
   position: relative;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 
-  overflow: hidden; /* impede estouro */
+  overflow: hidden;
 
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
   }
-  .number {
-    position: absolute;
-    top: 16px;
-    left: 20px;
-    width: 42px;
-    height: 42px;
-    background: #111827;
-    color: #fff;
-    font-size: 40px;
-    font-weight: 700;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .nacionality {
-    position: absolute;
-    top: 16px;
-    right: 20px;
-    width: 42px;
-    height: 42px;
-    background: #111827;
-    color: #fff;
-    font-size: 40px;
-    font-weight: 700;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .titleWinner {
-    position: absolute;
-    bottom: 16px;
-    left: 20px;
-    width: 42px;
-    height: 42px;
-    background: #111827;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-  }
-  .titleWinner svg {
-    width: 40px;
-    height: 40px;
-  }
-  .titleWinner span {
-    position: absolute;
-    font-size: 18px;
-    font-weight: 700;
-    bottom: 2px;
-    right: -2px;
-  }
-  .teamLogo {
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-    width: 52px;
-    height: 52px;
-    background-color: #111827;
-    color: #fff;
-    font-size: 50px;
-    font-weight: 700;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
   img {
     width: 280px;
     height: 180px;
@@ -150,4 +85,9 @@ export const Description = styled.p`
   align-items: center;
   gap: 12px;
   overflow: hidden;
+`;
+export const Endereco = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `;

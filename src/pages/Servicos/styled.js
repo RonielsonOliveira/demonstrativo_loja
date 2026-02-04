@@ -13,7 +13,7 @@ export const Title = styled.h1`
 export const Content = styled.div`
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+
   gap: 24px;
   width: 60%;
   max-width: 1200px;

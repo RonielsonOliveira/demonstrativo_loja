@@ -7,9 +7,9 @@ export default function Contato() {
   return (
     <Container>
       <Title>Contato</Title>
-      <Title>Telefone^(83) 31312312123</Title>
-      <Title>Email jackson@live.com</Title>
-      <Title>Enderecos</Title>
+      <Title>Telefone: (83) 31312312123</Title>
+      <Title>Email: jackson@live.com</Title>
+      <Title>Endereços</Title>
       <Content>
         <Contatos>
           {Mock.map((item) => (

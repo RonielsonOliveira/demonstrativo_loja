@@ -42,6 +42,9 @@ export const GridInner = styled.div`
 export const Figure = styled.figure`
   position: relative;
   text-align: center;
+  &:hover {
+    transform: scale(1.2);
+  }
 
   img {
     width: clamp(180px, 40vw, 250px);

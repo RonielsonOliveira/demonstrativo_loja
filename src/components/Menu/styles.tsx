@@ -94,6 +94,11 @@ export const SocialGroup = styled.div`
   align-items: center;
   justify-content: center;
 
+  a {
+    color: white;
+    font-size: 2.2rem;
+  }
+
   img {
     width: 120px;
     height: auto;

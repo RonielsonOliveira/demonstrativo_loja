@@ -15,7 +15,7 @@ export const Content = styled.div`
   gap: 24px;
   width: 100%;
   max-width: 1200px;
-  margin: 32px auto;
+  margin: 32px auto 60px;
 
   @media (max-width: 1024px) {
     flex-direction: column-reverse;
