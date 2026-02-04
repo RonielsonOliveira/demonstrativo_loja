@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import * as colors from "../../config/colors";
 
 export const Title = styled.h1`
   text-align: center;
@@ -53,7 +52,7 @@ export const Figure = styled.figure`
   figcaption {
     margin-top: 10px;
     padding: 8px 12px;
-    color: ${colors.textcolor};
+    color: #fff;
     font-weight: 700;
     font-size: clamp(14px, 2.5vw, 16px);
   }

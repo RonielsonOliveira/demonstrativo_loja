@@ -13,13 +13,15 @@ import {
 } from "./styled.js";
 
 import { Link } from "react-router-dom";
-import pinturaLogo from "../../Img/pintura.png";
-import reformaLogo from "../../Img/reforma.png";
 import ImageSlider from "../../components/Slider/index.js";
-import instagramLogo from "../../Img/instagram.png";
-import whatsapplogo from "../../Img/whatsapp.png";
 import Mock from "../../pages/Home/homeMock.json";
 
+import { GiPaintRoller } from "react-icons/gi";
+import { MdConstruction } from "react-icons/md";
+import { FaLightbulb, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { LuBrickWall } from "react-icons/lu";
+import { MdTexture } from "react-icons/md";
+import { FaSink } from "react-icons/fa";
 import slide1 from "../../Img/slide-1.jpeg";
 import slide2 from "../../Img/slide-2.jpeg";
 import slide3 from "../../Img/slide-3.jpeg";
@@ -51,16 +53,29 @@ export default function Contato() {
 
       <GridInner>
         <Figure>
-          <img src={pinturaLogo} alt="Pintura" />
+          <GiPaintRoller size={250} color="white" />
+
           <figcaption>Pintura</figcaption>
         </Figure>
         <Figure>
-          <img src={reformaLogo} alt="Reformas" />
+          <MdConstruction size={250} color="white" />
           <figcaption>Reformas em geral</figcaption>
         </Figure>
         <Figure>
-          <img src={reformaLogo} alt="Reformas" />
-          <figcaption>Reformas em geral</figcaption>
+          <FaLightbulb size={250} color="white" />
+          <figcaption>Iluminação</figcaption>
+        </Figure>
+        <Figure>
+          <LuBrickWall size={250} color="white" />
+          <figcaption>Revestimentos</figcaption>
+        </Figure>
+        <Figure>
+          <MdTexture size={250} color="white" />
+          <figcaption>Gesso Acartonado</figcaption>
+        </Figure>
+        <Figure>
+          <FaSink size={250} color="white" />
+          <figcaption>Cubas Acartonadas</figcaption>
         </Figure>
       </GridInner>
 
@@ -74,14 +89,14 @@ export default function Contato() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src={instagramLogo} alt="Instagram" />
+              <FaInstagram size={140} color="white" />
             </a>
             <figcaption>Instagram</figcaption>
           </figure>
 
           <figure>
             <a href={url} target="_blank" rel="noreferrer">
-              <img src={whatsapplogo} alt="WhatsApp" />
+              <FaWhatsapp size={140} color="white" />
             </a>
             <figcaption>WhatsApp</figcaption>
           </figure>
