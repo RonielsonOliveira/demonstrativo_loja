@@ -18,7 +18,6 @@ export function Menu() {
 
           <S.SocialGroup>
             <S.LogoLink to="/" className="Link">
-              <span> Belas Artes Construções</span>
               <img src={logo} alt="Belas Artes Construcoes" />
             </S.LogoLink>
           </S.SocialGroup>

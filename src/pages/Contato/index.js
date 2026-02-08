@@ -1,15 +1,18 @@
 import React from "react";
 import { Container } from "../../styles/GlobalStyles.js";
-import { Title, Content, Contatos } from "./styled.js";
-import Mock from "../../pages/Contato/orcamentoMock.json";
+import { Content, Contatos, DetalhesContato, DetalhesColor } from "./styled.js";
+import Mock from "../../pages/Contato/contatoMock.json";
 import Card from "../../components/Card/index.js";
 export default function Contato() {
   return (
     <Container>
-      <Title>Contato</Title>
-      <Title>Telefone: (83) 31312312123</Title>
-      <Title>Email: jackson@live.com</Title>
-      <Title>Endereços</Title>
+      <DetalhesContato>
+        <DetalhesColor>Telefone</DetalhesColor> (85) 992271722
+      </DetalhesContato>
+      <DetalhesContato>
+        <DetalhesColor>Email</DetalhesColor> jacksonwillianmbraga@gmail.com
+      </DetalhesContato>
+      <DetalhesColor>Endereços</DetalhesColor>
       <Content>
         <Contatos>
           {Mock.map((item) => (

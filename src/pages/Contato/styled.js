@@ -6,6 +6,16 @@ export const Title = styled.h1`
   text-align: center;
   font-size: 28px;
 `;
+export const DetalhesContato = styled.h2`
+  margin: 20px auto;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+`;
+export const DetalhesColor = styled.h2`
+  color: #f2a900;
+  font-size: 38px;
+`;
 
 export const Content = styled.div`
   display: flex;

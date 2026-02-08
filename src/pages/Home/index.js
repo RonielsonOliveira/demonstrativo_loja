@@ -78,8 +78,6 @@ export default function Contato() {
         </Figure>
       </GridInner>
 
-      <Title>Contato</Title>
-
       <Info>
         <ContactGrid>
           <Figure>
