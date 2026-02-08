@@ -11,6 +11,15 @@ export const DetalhesContato = styled.h2`
   color: white;
   text-align: center;
   font-size: 28px;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  @media (max-width: 768px) {
+    width: min(85%, 900px);
+    line-height: 1.7;
+    text-align: center;
+  }
 `;
 export const DetalhesColor = styled.h2`
   color: #f2a900;
