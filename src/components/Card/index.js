@@ -8,7 +8,7 @@ export default function Card({ cidade, endereco }) {
       return (
         <Info>
           <div>
-            <SiAlltrails size={40} />
+            <SiAlltrails size={40} color="green" />
             <Description>
               <Endereco>
                 <span>{cidade}</span>
@@ -23,7 +23,7 @@ export default function Card({ cidade, endereco }) {
       return (
         <Info>
           <div>
-            <TbBeach size={40} />
+            <TbBeach size={40} color="yellow" />
             <Description>
               <Endereco>
                 <span>{cidade}</span>

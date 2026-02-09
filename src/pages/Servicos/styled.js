@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Title = styled.h1`
   margin: 20px auto;
-  color: white;
+  color: #f2a900;
   width: 70%;
   border-radius: 15px;
   text-align: center;
-  font-size: 28px;
+  font-size: 38px;
 `;
 
 export const Content = styled.div`
@@ -28,7 +28,7 @@ export const Content = styled.div`
 export const Description = styled.div`
   display: flex;
   justify-items: center;
-  padding: 16px;
+  padding: 24px;
   color: white;
 `;
 export const Image = styled.div`

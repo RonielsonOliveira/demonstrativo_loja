@@ -86,14 +86,14 @@ export default function Contato() {
               target="_blank"
               rel="noreferrer"
             >
-              <FaInstagram size={140} color="white" />
+              <FaInstagram size={140} color="#E1306C" />
             </a>
             <figcaption>Instagram</figcaption>
           </Figure>
 
           <Figure>
             <a href={url} target="_blank" rel="noreferrer">
-              <FaWhatsapp size={140} color="white" />
+              <FaWhatsapp size={140} color="#25D366" />
             </a>
             <figcaption>WhatsApp</figcaption>
           </Figure>
