@@ -26,11 +26,12 @@ import slide1 from "../../Img/slide-1.jpeg";
 import slide2 from "../../Img/slide-2.jpeg";
 import slide3 from "../../Img/slide-3.jpeg";
 import slide4 from "../../Img/slide-4.jpeg";
+import slide5 from "../../Img/slide-5.jpeg";
 
 export default function Contato() {
   const numero = "5585992271722";
   const url = `https://wa.me/${numero}`;
-  const imagens = [slide1, slide2, slide3, slide4];
+  const imagens = [slide1, slide2, slide3, slide4, slide5];
 
   return (
     <Container>

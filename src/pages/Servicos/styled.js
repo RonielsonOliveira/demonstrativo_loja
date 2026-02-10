@@ -32,13 +32,27 @@ export const Description = styled.div`
   color: white;
 `;
 export const Image = styled.div`
-  align-items: flex-end;
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
-  img {
-    margin: 0 auto;
-    width: 80%;
+
+  width: 100%;
+
+  img,
+  video {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 9 / 16;
     border-radius: 15px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    img,
+    video {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 `;

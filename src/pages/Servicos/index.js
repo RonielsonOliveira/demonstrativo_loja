@@ -1,8 +1,11 @@
 import React from "react";
 import { Container } from "../../styles/GlobalStyles.js";
 import { Title, Content, Description, Image } from "./styled.js";
-
+import video from "../../videos/video1.mp4";
+import video2 from "../../videos/video2.mp4";
+import video3 from "../../videos/video3.mp4";
 import slide1 from "../../Img/slide-1.jpeg";
+import VideoPlayer from "../../components/VideoPlayer/videoPlayer.tsx";
 export default function Servicos() {
   return (
     <Container>
@@ -16,7 +19,7 @@ export default function Servicos() {
           garantindo resultaos de alta qualidade e satisfaçã
         </Description>
         <Image>
-          <img src={slide1} alt="Pintura" />
+          <VideoPlayer src={video} />
         </Image>
       </Content>
       <Title>Pintura</Title>
@@ -42,7 +45,9 @@ export default function Servicos() {
           garantindo resultados de alta qualidade e satisfaçã
         </Description>
         <Image>
-          <img src={slide1} alt="Pintura" />
+          <Image>
+            <VideoPlayer src={video2} />
+          </Image>
         </Image>
       </Content>
       <Title>Cubas Acartonadas</Title>
@@ -81,7 +86,9 @@ export default function Servicos() {
           garantindo resultados de alta qualidade e satisfaçã
         </Description>
         <Image>
-          <img src={slide1} alt="Pintura" />
+          <Image>
+            <VideoPlayer src={video3} />
+          </Image>
         </Image>
       </Content>
     </Container>
