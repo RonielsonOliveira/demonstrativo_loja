@@ -3,9 +3,9 @@ import * as colors from "../../config/colors";
 
 export const Title = styled.h1`
   margin: 20px auto;
-  color: #e6e6e6;
+  color: #f2a900;
   text-align: center;
-  font-size: 28px;
+  font-size: 32px;
 `;
 
 export const Content = styled.div`

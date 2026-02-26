@@ -7,7 +7,7 @@ export const Title = styled.h1`
   max-width: 900px;
   font-family: sans-serif;
   font-weight: bold;
-  color: #e6e6e6;
+  color: #f2a900;
   padding: 0 16px;
 `;
 
@@ -36,7 +36,7 @@ export const GridInner = styled.div`
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin: 20px auto;
+  margin: 80px auto;
 `;
 
 export const Figure = styled.figure`

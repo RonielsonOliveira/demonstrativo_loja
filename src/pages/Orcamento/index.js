@@ -119,7 +119,7 @@ export default function Aluno() {
               <input
                 type="checkbox"
                 name="servico"
-                value="Gesso Acartonado"
+                value="Gesso Acartonado (Drywall)"
               ></input>
             </label>
           </Checkbox>
