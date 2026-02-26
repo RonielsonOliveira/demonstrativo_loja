@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Menu from "./components/Menu/index.tsx";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/theme.ts";
+import Footer from "./components/Footer/index.js";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Routes />
         <GlobalStyles />
         <ToastContainer autoClose={3000} className="toast-container" />
+        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   );

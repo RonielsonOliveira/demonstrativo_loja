@@ -194,7 +194,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     width: 100vw;
     height: 100svh;
     background: #3a3f45;
-    z-index: ${theme.layers.menu};
+    z-index: 2000;
     display: flex;
     align-items: center;
     justify-content: center;

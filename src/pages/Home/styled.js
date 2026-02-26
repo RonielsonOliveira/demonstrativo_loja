@@ -71,8 +71,8 @@ export const FloatingCTA = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 999;
 
+  z-index: 1100;
   animation: float 3s ease-in-out infinite;
 
   @keyframes float {
@@ -101,7 +101,6 @@ export const FloatingCTALeft = styled.div`
   position: fixed;
   bottom: 20px;
   left: 20px;
-  z-index: 999;
 
   animation: float 3s ease-in-out infinite;
 

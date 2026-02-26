@@ -1,19 +1,26 @@
 import styled from "styled-components";
-import * as colors from '../../config/colors'
+
 export const NavFooter = styled.footer`
-  background: ${colors.primaryColor};
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.6); /* translúcido */
+  backdrop-filter: blur(6px); /* efeito vidro (opcional) */
+
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 
   a {
     color: #fff;
-    font-weight: bold;
     text-decoration: none;
 
     &:hover {
@@ -21,4 +28,3 @@ export const NavFooter = styled.footer`
     }
   }
 `;
-

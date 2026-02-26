@@ -147,7 +147,7 @@ export const Container = styled.section`
   width: 100%;
   height: 100%;
   text-align: center;
-  padding: 30px;
+  padding: 50px;
   margin-top: 120px;
   box-shadow: 0 0 10px rgba(44, 20, 20, 0.1);
 

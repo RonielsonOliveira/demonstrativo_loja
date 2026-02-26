@@ -1,50 +1,51 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-  margin: 20px auto;
   color: #f2a900;
-  width: 70%;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 38px;
+  font-size: clamp(24px, 4vw, 36px);
 `;
 
 export const Content = styled.div`
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 100px;
+  align-items: start;
 
-  gap: 24px;
-  width: 60%;
-  max-width: 1200px;
-  margin: 32px auto;
+  width: min(100%, 1200px);
+  margin: 40px auto 80px auto;
+  padding: 0 80px;
 
   @media (max-width: 1024px) {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 40px;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 `;
-
-export const Description = styled.div`
+export const TextBlock = styled.div`
   display: flex;
-  justify-items: center;
-  padding: 24px;
-  color: white;
+  flex-direction: column;
+
+  gap: 14px;
+  max-width: 520px;
 `;
-export const Image = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const Description = styled.div`
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.7;
+`;
 
+export const Image = styled.div`
   width: 100%;
+  max-width: 280px;
+
+  border-radius: 8px;
+  aspect-ratio: 9 / 16;
+
+  overflow: hidden;
 
   img,
   video {
-    width: 90%;
-    max-width: 600px;
-    height: auto;
-    aspect-ratio: 9 / 16;
-    border-radius: 15px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
